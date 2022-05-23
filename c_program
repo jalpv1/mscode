@@ -1,0 +1,9 @@
+#include <iostream>
+template<typename T> void m(T t) { std::cout << "m(T=" << 4 typeid(T).name() << ")" << std::endl; }
+void m(int i) { std::cout << "m(int)\n"; }
+template<typename T> void f(T t) { m(t); }
+int main() {
+    f("Hello");
+    f(123);
+    f(4000000000);
+}
